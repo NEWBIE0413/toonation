@@ -1,6 +1,6 @@
+from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import StaleElementReferenceException
-from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.by import By
 import asyncio
@@ -8,9 +8,9 @@ import asyncio
 options = Options()
 options.add_argument("--headless=new")
 browser = webdriver.Firefox(options=options)
-invite = "https://toon.at/widget/alertbox/{주소}" # 투네이션 후원창 주소입력
+toonation_url = "https://toon.at/widget/alertbox/{주소}" # 투네이션 후원창 주소입력
 
-browser.get(invite)
+browser.get(toonation_url)
 
 async def find():
     global running
